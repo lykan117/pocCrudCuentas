@@ -27,7 +27,7 @@ public class CuentaService {
         List<Cuenta> cuentas = CsvUtils.leerCuentas();
         String now = LocalDateTime.now().format(DateTimeFormatter.ISO_LOCAL_DATE_TIME);
         nueva.setFechaRegistro(now);
-        nueva.setFechaUpdate(now);
+        nueva.setFechaUpdate("-");
         cuentas.add(nueva);
         CsvUtils.escribirCuentas(cuentas);
     }
